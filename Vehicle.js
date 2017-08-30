@@ -12,18 +12,24 @@ var Vehicle= function(e,f,g,a,m){
     function fuelLeft(){
         return fuel;
     }
-    function fill(){
-        let percent = Math.cell(Math.random);
+    function fill(p){
+        let percent =p;
         fuel = fuel + percent
-        if(fuel>1){
-            fuel = 1;
+        if(fuel>gastank){
+            fuel = gastank;
         }
-
     }
 
     function drive(h){
-        let hours = h
-        fuel = fuel - hours*
+        let hours = h;
+
+        if(fuel- hours*engineEfficiency()<0){
+          hours= fuel/engineEfficiency();
+          fuel=0;
+        }
+        else{
+           fuel = fuel - hours*engineEfficiency();
+        }
         milesDriven= milesDriven + hours*averageMPG
     }
 

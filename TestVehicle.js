@@ -2,8 +2,8 @@ const Vehicle = require('./Vehicle.js');
 
 function main(){
     //make two vehicles and take them for a spin.
-let V1 = new vehicle();
-let V2 = new vehicle();
+let V1 = new Vehicle();
+let V2 = new Vehicle();
 
 
 
