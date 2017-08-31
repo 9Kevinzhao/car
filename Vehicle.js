@@ -5,8 +5,8 @@ var Vehicle= function(e,f,g,a,m){
     let averageMPG = a;
     let milesDriven = m;
 
-    function totalmiles(){
-        return milesdriven;
+    function totalMiles(){
+        return milesDriven;
     }
 
     function fuelLeft(){
@@ -47,4 +47,7 @@ var Vehicle= function(e,f,g,a,m){
             return null;
         }
     }
+    return {totalMiles,fuelLeft,fill,drive};
 }
+
+module.exports = Vehicle;
